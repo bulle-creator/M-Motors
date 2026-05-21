@@ -166,7 +166,7 @@ Installer :
 # Cloner le projet
 
 ```bash
-git clone https://github.com/votre-repository/m-motors.git
+git clone https://github.com/bulle-creator/m-motors.git
 ```
 
 ---
