@@ -1,236 +1,292 @@
-# README – Projet de Refonte de l’Application Web M-Motors
+# README — Application Java de Gestion de Vente et Location de Voitures
 
-## 1. Présentation de l’entreprise
+# M-Motors Application
 
-M-Motors est une entreprise spécialisée dans la vente de véhicules d’occasion, créée en 1987. Grâce à la qualité de ses services et à sa politique orientée satisfaction client, l’entreprise est devenue après 30 ans l’une des 10 meilleures entreprises nationales du secteur.
+## Description
 
-L’entreprise propose :
+M-Motors est une application web développée en Java permettant la gestion de :
 
-* Vente de véhicules d’occasion
-* Service après-vente
-* Financement
-* Reprise d’ancien véhicule
-* Conseil personnalisé
-* Essais routiers
+* la vente de véhicules d’occasion,
+* la location longue durée avec option d’achat,
+* la gestion des dossiers clients,
+* le suivi des demandes,
+* ainsi que l’administration des véhicules et utilisateurs.
 
-L’entreprise compte environ :
-
-* **800 employés**
-* **1 million de clients** au niveau national
+L’objectif du projet est de proposer une plateforme moderne, sécurisée et entièrement dématérialisée.
 
 ---
 
-# 2. Organigramme de l’entreprise
+# Fonctionnalités
 
-![Image](https://images.openai.com/static-rsc-4/a2FgMHizqqz4imF8O1BqUU2MnMveffYjdeaRIsfwanBK2OvXcYpaOqRdXNcqjF39c4HqpipLgYTJpZp2M1oYbzAVjzNtsOXXs3KuZAE4-JRqKN4ugLzF3U2ycM3DD9SD6VUrgcw08gH0PWzynVMiQoB615eYhsS0siYagGrZfHIG3Uy1wvFjR3Cu-CCgKG2i?purpose=fullsize)
+## Espace Client
 
-![Image](https://images.openai.com/static-rsc-4/bTd18HRNPf3Yx5OrjDJYQmYQsHoe904B40f2zqvXuAoTHUXwj5iAF6nu5jaeuqoef6InDOyx5txBsFM-X5Wm4YZzQbV8JbQc3T4ISBiEUe6_ffLr-38EU0WNFDReTnAFfOlEaw--rs1zNCNvWjeu3-ZNUmP0ru0zCQBntMxQbROIGr6iSxTvmizssJkxG98O?purpose=fullsize)
+### Gestion des véhicules
 
-Structure organisationnelle :
+* Consultation des véhicules disponibles
+* Recherche multicritère :
 
-* Direction Générale
-
-  * Service Commercial
-  * Service Après-Vente
-  * Service Financier
-  * Service IT
-  * Service RH
+  * marque
+  * modèle
+  * prix
+  * kilométrage
+  * type (vente/location)
 
 ---
 
-# 3. Contexte du projet
+## Achat de véhicule
 
-Suite à une étude de marché réalisée par le service commercial, M-Motors souhaite lancer un nouveau service :
+Le client peut :
 
-## Location Longue Durée avec Option d’Achat (LLD)
+* créer un compte,
+* déposer un dossier d’achat,
+* télécharger les documents nécessaires,
+* suivre l’avancement du dossier.
 
-Ce nouveau service permettra aux clients de louer un véhicule avec possibilité d’achat final.
+---
 
-### Services inclus ou optionnels
+## Location de véhicule
+
+Le client peut :
+
+* choisir une voiture en location,
+* sélectionner les options disponibles,
+* déposer son dossier,
+* suivre sa demande.
+
+### Services inclus
 
 * Assurance tous risques
 * Assistance dépannage
 * Entretien et SAV
 * Contrôle technique
 
-Le projet a été validé par la direction avec un budget important alloué à la refonte complète de l’application web existante.
+---
 
-Un **Product Owner** issu du service commercial a été nommé afin de piloter les besoins métiers.
+## Back-Office Administrateur
+
+L’administrateur peut :
+
+* ajouter des véhicules,
+* modifier des véhicules,
+* supprimer des véhicules,
+* basculer un véhicule :
+
+  * vente → location
+  * location → vente
+* valider/refuser les dossiers clients,
+* gérer les utilisateurs.
 
 ---
 
-# 4. Objectifs du projet
+# Architecture du projet
 
-## Objectif principal
+## Architecture MVC
 
-Moderniser l’application web actuelle afin d’intégrer :
+Le projet suit une architecture MVC :
 
-* La vente de véhicules
-* La location longue durée
-* La gestion digitale complète des dossiers clients
+* Model → gestion des données
+* View → interface utilisateur
+* Controller → logique métier
 
 ---
 
-# 5. Fonctionnalités Front-Office
+# Technologies utilisées
 
-L’application destinée aux clients devra permettre :
+## Backend
 
-## Gestion des véhicules
+* Java 17
+* Spring Boot
+* Spring MVC
+* Spring Security
+* Hibernate / JPA
 
-* Recherche de véhicules
-* Filtre Achat / Location
-* Consultation des détails des véhicules
+---
 
-## Gestion des comptes clients
+## Frontend
 
-* Création de compte
+* HTML5
+* CSS3
+* Bootstrap
+* JavaScript
+
+---
+
+## Base de données
+
+* MySQL
+
+---
+
+## Outils
+
+* Maven
+* Git
+* GitHub
+* Postman
+
+---
+
+# Structure du projet
+
+```bash
+M-Motors/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com.mmotors/
+│   │   │       ├── controller/
+│   │   │       ├── service/
+│   │   │       ├── repository/
+│   │   │       ├── model/
+│   │   │       └── security/
+│   │   │
+│   │   └── resources/
+│   │       ├── templates/
+│   │       ├── static/
+│   │       └── application.properties
+│
+├── pom.xml
+└── README.md
+```
+
+---
+
+# Installation du projet
+
+## Prérequis
+
+Installer :
+
+* Java JDK 17
+* Maven
+* MySQL
+* Git
+
+---
+
+# Cloner le projet
+
+```bash
+git clone https://github.com/votre-repository/m-motors.git
+```
+
+---
+
+# Configuration de la base de données
+
+Créer une base de données MySQL :
+
+```sql
+CREATE DATABASE mmotors;
+```
+
+Modifier le fichier :
+
+```properties
+src/main/resources/application.properties
+```
+
+Exemple :
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/mmotors
+spring.datasource.username=root
+spring.datasource.password=password
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
+
+---
+
+# Lancer l’application
+
+## Avec Maven
+
+```bash
+mvn spring-boot:run
+```
+
+---
+
+# Accès à l’application
+
+Application disponible sur :
+
+```bash
+http://localhost:8080
+```
+
+---
+
+# Authentification
+
+## Rôles disponibles
+
+### ADMIN
+
+* Gestion des véhicules
+* Gestion des dossiers
+* Gestion des utilisateurs
+
+### CLIENT
+
+* Consultation des véhicules
+* Achat/location
+* Suivi des dossiers
+
+---
+
+# Sécurité
+
+Le projet utilise :
+
+* Spring Security
 * Authentification sécurisée
-* Gestion de profil client
-
-## Gestion des dossiers
-
-* Dépôt de dossier d’achat ou de location
-* Téléchargement des documents justificatifs
-* Dossier 100% dématérialisé
-
-## Suivi des demandes
-
-* Consultation de l’état d’avancement du dossier
-* Notifications des validations/refus
+* Gestion des rôles
+* Protection des routes
 
 ---
 
-# 6. Fonctionnalités Back-Office
+# Fonctionnalités futures
 
-L’application d’administration devra permettre :
-
-## Gestion des véhicules
-
-* Ajouter un véhicule à vendre
-* Ajouter un véhicule à louer
-* Modifier les informations d’un véhicule
-* Supprimer un véhicule
-
-## Gestion des statuts
-
-* Basculer un véhicule :
-
-  * Vente → Location
-  * Location → Vente
-
-## Gestion des dossiers clients
-
-* Visualisation des dossiers
-* Validation des dossiers
-* Refus des dossiers
-* Historique des traitements
+* Paiement en ligne
+* Signature électronique
+* Notifications email
+* Application mobile
+* Tableau de bord statistiques
+* Hébergement cloud
 
 ---
 
-# 7. Contraintes techniques
+# Tests
 
-Le service IT a défini plusieurs contraintes importantes :
+Tests réalisés avec :
 
-## Haute disponibilité
+* JUnit
+* Mockito
 
-Définition des indicateurs :
+Lancer les tests :
 
-### Recovery Point Objective (RPO)
-
-Temps maximal acceptable de perte de données.
-
-### Recovery Time Objective (RTO)
-
-Temps maximal acceptable pour remettre le service en fonctionnement après incident.
+```bash
+mvn test
+```
 
 ---
 
-# 8. Architecture technique
+# Méthodologie
 
-L’architecture devra être modernisée afin de :
-
-* Supporter un grand nombre d’utilisateurs
-* Garantir la disponibilité des services
-* Assurer la sécurité des données
-* Faciliter l’évolution future de l’application
-
-## Éléments techniques prévus
-
-* Nouvelle base de données
-* Migration des données existantes
-* API sécurisée
-* Hébergement Cloud
-* Sauvegardes automatiques
-* Monitoring système
+Projet réalisé en méthode Agile Scrum.
 
 ---
 
-# 9. Move To Cloud
+# Auteur
 
-Le projet inclut une opération stratégique :
-
-## Migration vers le Cloud
-
-Objectifs :
-
-* Scalabilité
-* Réduction des coûts d’infrastructure
-* Haute disponibilité
-* Sauvegarde et reprise après incident
-* Sécurité renforcée
-
-Exemples de solutions possibles :
-
-* AWS
-* Microsoft Azure
-* Google Cloud Platform
+Projet réalisé dans le cadre d’un Bachelor Développeur Web / Java.
 
 ---
 
-# 10. Acteurs du projet
+# Licence
 
-| Acteur             | Rôle                            |
-| ------------------ | ------------------------------- |
-| Direction Générale | Validation stratégique          |
-| Product Owner      | Définition des besoins métiers  |
-| Service Commercial | Étude de marché et suivi métier |
-| Service IT         | Développement et architecture   |
-| Clients            | Utilisateurs de la plateforme   |
-
----
-
-# 11. Méthodologie proposée
-
-Méthode Agile Scrum :
-
-* Sprint planning
-* Daily meeting
-* Sprint review
-* Sprint retrospective
-
-## Rôles Scrum
-
-* Product Owner
-* Scrum Master
-* Équipe de développement
-
----
-
-# 12. Sécurité
-
-Mesures de sécurité recommandées :
-
-* Authentification sécurisée
-* Chiffrement des données
-* Sauvegardes régulières
-* Gestion des accès
-* Protection contre les cyberattaques
-
----
-
-# 13. Conclusion
-
-Le projet de refonte de l’application web M-Motors représente une étape stratégique importante pour l’entreprise. L’intégration du service de location longue durée permettra de diversifier les offres commerciales et d’améliorer l’expérience client.
-
-La modernisation de l’architecture, la migration vers le cloud et la digitalisation complète des dossiers permettront également d’assurer une meilleure performance, sécurité et évolutivité du système d’information.
-
+Projet pédagogique — usage académique.
