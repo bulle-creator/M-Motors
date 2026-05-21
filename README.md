@@ -273,12 +273,6 @@ mvn test
 
 ---
 
-# Méthodologie
-
-Projet réalisé en méthode Agile Scrum.
-
----
-
 # Auteur
 
 Projet réalisé dans le cadre d’un Bachelor Développeur Web / Java.
