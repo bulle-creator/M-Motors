@@ -256,7 +256,7 @@ Le projet utilise :
 * Tableau de bord statistiques
 * Hébergement cloud
 
----
+---https://github.com/bulle-creator/M-Motors/blob/main/README.md
 
 # Tests
 
@@ -265,6 +265,32 @@ Tests réalisés avec :
 * JUnit
 * Mockito
 
+Exmple de test :
+
+```
+@ExtendWith(MockitoExtension.class)
+class VehicleServiceTest {
+
+    @Mock
+    private VehicleRepository vehicleRepository;
+
+    @InjectMocks
+    private VehicleService vehicleService;
+
+    @Test
+    void shouldReturnAllVehicles() {
+
+        List<Vehicle> vehicles = List.of(new Vehicle());
+
+        when(vehicleRepository.findAll()).thenReturn(vehicles);
+
+        List<Vehicle> result = vehicleService.getAllVehicles();
+
+        assertEquals(1, result.size());
+    }
+}
+
+```
 Lancer les tests :
 
 ```bash
