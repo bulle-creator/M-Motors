@@ -1,5 +1,3 @@
-# README — Application Java de Gestion de Vente et Location de Voitures
-
 # M-Motors Application
 
 ## Description
